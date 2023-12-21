@@ -437,7 +437,7 @@ static int sipa_dummy_probe(struct platform_device *pdev)
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 1, 0)
 	    eth_random_addr(netdev->dev_addr);
 		netif_napi_add_weight(netdev,
-			           &sipa_summy->napi,
+			           &sipa_dummy->napi,
 					   sipa_dummy_rx_poll_handler,
 					   SIPA_DUMMY_NAPI_WEIGHT);
 	
